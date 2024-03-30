@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
+This project was devoloped according to the [Ecommerce App with Angular](https://www.youtube.com/watch?v=hejR2GfFXiA&t=941s) video, from the [LEARNING PARTNER](https://www.youtube.com/@LearningPartnerDigital) 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
