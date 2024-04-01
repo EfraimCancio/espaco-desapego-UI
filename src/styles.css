@@ -1,11 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
 :root {
   --main-bg-color: #e4ddd3;
   --text-primary-color: #555555;
   --imperial-red-color: #FB4B4E;
   --gray-bg-color: #f1f3f6;
 }
-
 
 * {
   margin: 0;

@@ -1,4 +1,5 @@
-<app-defaut-login-layout title="Login into your account" primaryBtnText="Login Now" secondaryBtnText="Signup Now">
+<app-defaut-login-layout title="Login into your account" primaryBtnText="Login Now" secondaryBtnText="Signup Now"
+  (submit)="submit()" (navigate)="navigate()" [disablePrimaryBtn]="!loginForm.valid">
   <form [formGroup]="loginForm">
     <app-primary-input formControlName="email" inputName="email" type="email" label="Email"
       placeholder="email@email.com.br">
