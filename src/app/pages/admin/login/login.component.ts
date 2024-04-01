@@ -41,13 +41,16 @@ export class LoginComponent {
   }
 
   submit() {
+    console.log('Dentro do Submit', this.loginForm.value)
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
       next: () => this.toastService.success("Deu bom"),
       error: () => this.toastService.error("Deu ruim")
     })
+
   }
 
   navigate() {
+    console.log("Dentro do NAvigate")
     this.router.navigate(["/signup"])
   }
 }
