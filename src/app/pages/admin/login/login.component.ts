@@ -50,7 +50,7 @@ export class LoginComponent {
   }
 
   navigate() {
-    console.log("Dentro do NAvigate")
+    console.log("Dentro do Navigate")
     this.router.navigate(["/signup"])
   }
 }
