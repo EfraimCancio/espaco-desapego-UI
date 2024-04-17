@@ -1,0 +1,17 @@
+.menu-container {
+  background-color: var(--imperial-red-color);
+  color: white;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+  height: 90vh;
+
+  .menu-list {
+    padding-top: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2rem
+  }
+}
