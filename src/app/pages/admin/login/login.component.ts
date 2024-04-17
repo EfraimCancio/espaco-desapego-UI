@@ -8,7 +8,7 @@ import { LoginService } from '../../../services/login.service';
 
 
 interface LoginForm {
-  email: FormControl,
+  login: FormControl,
   password: FormControl
 }
 
@@ -29,22 +29,35 @@ export class LoginComponent {
 
   loginForm!: FormGroup<LoginForm>;
 
+
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private toastService: ToastrService
+    private toastService: ToastrService,
   ) {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
+      login: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)])
     })
   }
 
+  // ngOnInit() {
+
+  // }
+
   submit() {
     console.log('Dentro do Submit', this.loginForm.value)
-    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => this.toastService.success("Deu bom"),
-      error: () => this.toastService.error("Deu ruim")
+    this.loginService.login(this.loginForm.value.login!, this.loginForm.value.password!).subscribe({
+      next: () => {
+        // const authToken = sessionStorage.getItem('auth-token');
+        this.toastService.success("Bem vido ao Espaço Desapego!")
+        // this.toastService.success("Seu tokem é: " + authToken?.toString)
+        setTimeout(() => {
+          this.router.navigate(["/layout"])
+        }, 1000);
+
+      },
+      error: () => this.toastService.error("Não foi possível Fazer Login. Confira seus dados ou Faça o seu registro")
     })
 
   }
