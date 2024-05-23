@@ -1,10 +1,45 @@
 <section class="table-container">
   <div class="table-title">
     <h2>Lista de Produtos Ativos</h2>
-    <button class="resgister-btn"><span>Cadastrar</span></button>
+    <button class="btn-register"><span>Cadastrar</span></button>
   </div>
-
-  <table>
+  <p-table [value]="arrayActiveProducts.content" [tableStyle]="{'min-width': '60rem'}" class="table-product">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="tb-title">Ação</th>
+        <th class="tb-title" pSortableColumn="id" style="width:20%">id <p-sortIcon field="id"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="descProduto" style="width:20%">Descrição <p-sortIcon
+            field="descProduto"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="idCategoria" style="width:20%">Categoria <p-sortIcon
+            field="idCategoria"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="idMarca" style="width:20%">Marca <p-sortIcon field="idMarca"></p-sortIcon>
+        </th>
+        <th class="tb-title" pSortableColumn="idTamanho" style="width:20%">Tamanho <p-sortIcon
+            field="idTamanho"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="idOrigem" style="width:20%">Origem <p-sortIcon
+            field="idOrigem"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="vlCusto" style="width:20%">Custo<p-sortIcon field="vlCusto"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td class="table-line">
+          <button class="btn-edit" onclick="">
+            E
+          </button>
+        </td>
+        <td class="table-line">{{product.id}}</td>
+        <td class="table-line">{{product.descProduto}}</td>
+        <td class="table-line">{{product.idCategoria}}</td>
+        <td class="table-line">{{product.idMarca}}</td>
+        <td class="table-line">{{product.idTamanho }}</td>
+        <td class="table-line">{{product.idOrigem}}</td>
+        <td class="table-line">{{product.vlCusto | currency: 'USD'}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <!-- <table>
     <thead>
       <tr>
         <th>AÇÃO</th>
@@ -39,5 +74,5 @@
       </tr>
       }
     </tbody>
-  </table>
+  </table> -->
 </section>
