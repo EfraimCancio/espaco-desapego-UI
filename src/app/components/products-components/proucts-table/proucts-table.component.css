@@ -74,5 +74,6 @@
 
   .table-line {
     background-color: #fff8f8;
+    color: var(--text-primary-color);
   }
 }
