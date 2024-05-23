@@ -12,7 +12,7 @@ export class CategoryService {
 
   }
 
-  getActiveProducts() {
+  getActiveCategories() {
     const url = this.apiUrl + '/ativos'
     return this.httpClient.get(url)
   }
