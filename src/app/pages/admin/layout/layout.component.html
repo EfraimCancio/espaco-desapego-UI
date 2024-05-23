@@ -1,7 +1,7 @@
 <div class="layout-container">
   <app-navbar></app-navbar>
   <div class="dashboard-container">
-    <app-dashboard-menu></app-dashboard-menu>
+    <app-dashboard-menu (onClickEvent)="onChildEvent($event)"></app-dashboard-menu>
     <app-proucts-table></app-proucts-table>
   </div>
 </div>

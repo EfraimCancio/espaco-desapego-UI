@@ -11,5 +11,8 @@ import { ProuctsTableComponent } from "../../../components/products-components/p
   imports: [DashboardMenuComponent, NavbarComponent, ProuctsTableComponent]
 })
 export class LayoutComponent {
-
+  tableChoice: string = '';
+  onChildEvent(event: string) {
+    console.log('Evento recebido:', event);
+  }
 }
