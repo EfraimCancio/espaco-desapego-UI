@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ProductRegistrationComponent } from './components/products-components/product-registration/product-registration.component';
 import { LayoutComponent } from './pages/admin/layout/layout.component';
 import { LoginComponent } from './pages/admin/login/login.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
@@ -26,5 +27,9 @@ export const routes: Routes = [
     path: "layout",
     component: LayoutComponent,
     // canActivate: [AuthGuardService]
+  },
+  {
+    path: "product-registration",
+    component: ProductRegistrationComponent
   }
 ];

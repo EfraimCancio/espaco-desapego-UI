@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ProductsService } from '../../../services/products.service';
 
@@ -21,7 +22,8 @@ export class ProuctsTableComponent {
 
   constructor(
     private productsService: ProductsService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -41,4 +43,8 @@ export class ProuctsTableComponent {
       }
     })
   };
+
+  registerProduct = () => {
+    this.router.navigate(["/product-registration"])
+  }
 }
