@@ -1,5 +1,9 @@
 <section class="table-container">
-  <h2>Lista de Produtos Ativos</h2>
+  <div class="table-title">
+    <h2>Lista de Produtos Ativos</h2>
+    <button class="resgister-btn"><span>Cadastrar</span></button>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -16,72 +20,24 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Exemplo de dados (substitua com seus próprios dados) -->
-      <tr>
+      @for (item of this.arrayActiveProducts.content; track item.id) {
+      <tr class="table-line">
         <td>
           <button class="btn-edit" onclick="">
             E
           </button>
         </td>
-        <td>1</td>
-        <td>Produto A</td>
-        <td>Eletrônicos</td>
-        <td>Marca X</td>
-        <td>Médio</td>
-        <td>Nacional</td>
-        <td>R$ 100,00</td>
-        <td>2024-04-17</td>
-        <td>2024-04-20</td>
+        <td>{{item.id}}</td>
+        <td>{{item.descProduto}}</td>
+        <td>{{item.idCategoria}}</td>
+        <td>{{item.idMarca}}</td>
+        <td>{{item.idTamanho}}</td>
+        <td>{{item.idOrigem}}</td>
+        <td>{{item.vlCusto}}</td>
+        <td>{{item.dtEntrada}}</td>
+        <td>{{item.dtSaida}}</td>
       </tr>
-      <!-- Adicione mais linhas conforme necessário -->
-      <tr>
-        <td>
-          <button class="btn-edit">
-            E
-          </button>
-        </td>
-        <td>1</td>
-        <td>Produto A</td>
-        <td>Eletrônicos</td>
-        <td>Marca X</td>
-        <td>Médio</td>
-        <td>Nacional</td>
-        <td>R$ 100,00</td>
-        <td>2024-04-17</td>
-        <td>2024-04-20</td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn-edit">
-            E
-          </button>
-        </td>
-        <td>1</td>
-        <td>Produto A</td>
-        <td>Eletrônicos</td>
-        <td>Marca X</td>
-        <td>Médio</td>
-        <td>Nacional</td>
-        <td>R$ 100,00</td>
-        <td>2024-04-17</td>
-        <td>2024-04-20</td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn-edit">
-            E
-          </button>
-        </td>
-        <td>1</td>
-        <td>Produto A</td>
-        <td>Eletrônicos</td>
-        <td>Marca X</td>
-        <td>Médio</td>
-        <td>Nacional</td>
-        <td>R$ 100,00</td>
-        <td>2024-04-17</td>
-        <td>2024-04-20</td>
-      </tr>
+      }
     </tbody>
   </table>
 </section>
