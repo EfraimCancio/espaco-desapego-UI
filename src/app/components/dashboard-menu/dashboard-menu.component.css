@@ -15,4 +15,13 @@
     gap: 2rem;
     cursor: pointer;
   }
+
+  .btn-active {
+    margin-left: -4.5rem;
+    padding-left: 6.5rem;
+    padding-block: 2rem;
+    background: #e4ddd3;
+    color: var(--imperial-red-color);
+    transition: all 1s ease;
+  }
 }

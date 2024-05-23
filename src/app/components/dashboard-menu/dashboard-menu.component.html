@@ -1,11 +1,40 @@
 <aside class="menu-container">
   <h3>ESPAÇO <br> DESAPEGO</h3>
   <ul class="menu-list">
-    <li>Produtos</li>
-    <li>Categorias</li>
-    <li>Marcas</li>
-    <li>Tamanhos</li>
-    <li>Origens</li>
-    <li>Usuarios</li>
+    @if (activeChoice === 'products') {
+    <li class="btn-active" (click)="onClick('products')">Produtos</li>
+    } @else {
+    <li (click)="onClick('products')">Produtos</li>
+    }
+
+    @if (activeChoice === 'categories') {
+    <li class="btn-active" (click)="onClick('categories')">Categorias</li>
+    } @else {
+    <li (click)="onClick('categories')">Categorias</li>
+    }
+
+    @if (activeChoice === 'brands') {
+    <li class="btn-active" (click)="onClick('brands')">Marcas</li>
+    } @else {
+    <li (click)="onClick('brands')">Marcas</li>
+    }
+
+    @if (activeChoice === 'sizes') {
+    <li class="btn-active" (click)="onClick('sizes')">Tamanhos</li>
+    } @else {
+    <li (click)="onClick('sizes')">Tamanhos</li>
+    }
+
+    @if (activeChoice === 'origins') {
+    <li class="btn-active" (click)="onClick('origins')">Origens</li>
+    } @else {
+    <li (click)="onClick('origins')">Origens</li>
+    }
+
+    @if (activeChoice === 'users') {
+    <li class="btn-active" (click)="onClick('users')">Usuarios</li>
+    } @else {
+    <li (click)="onClick('users')">Usuarios</li>
+    }
   </ul>
 </aside>
