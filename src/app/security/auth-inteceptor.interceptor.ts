@@ -1,8 +1,9 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
-export const authInteceptorInterceptor: HttpInterceptorFn = (req, next) => {
 
+export const authInteceptorInterceptor: HttpInterceptorFn = (req, next) => {
   const token = localStorage.getItem('auth_token');
+
   console.log('Entrou no interceptor', token);
   if (token) {
     console.log('Entrou no ifffffffffor', token);
