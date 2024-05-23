@@ -1,7 +1,7 @@
 <section class="table-container">
   <div class="table-title">
     <h2>Lista de Produtos Ativos</h2>
-    <button class="btn-register"><span>Cadastrar</span></button>
+    <button class="btn-register" (click)="registerProduct()"><span>Cadastrar</span></button>
   </div>
   <p-table [value]="arrayActiveProducts.content" [tableStyle]="{'min-width': '60rem'}" class="table-product">
     <ng-template pTemplate="header">

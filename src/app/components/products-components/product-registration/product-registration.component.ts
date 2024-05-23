@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from "../../navbar/navbar.component";
 
 @Component({
   selector: 'app-product-registration',
   standalone: true,
-  imports: [],
   templateUrl: './product-registration.component.html',
-  styleUrl: './product-registration.component.css'
+  styleUrl: './product-registration.component.css',
+  imports: [NavbarComponent]
 })
 export class ProductRegistrationComponent {
 
