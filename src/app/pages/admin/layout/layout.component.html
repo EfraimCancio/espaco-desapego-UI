@@ -2,6 +2,18 @@
   <app-navbar></app-navbar>
   <div class="dashboard-container">
     <app-dashboard-menu (onClickEvent)="onChildEvent($event)"></app-dashboard-menu>
+    @if( this.tableChoice === 'products' || this.tableChoice === '') {
     <app-proucts-table></app-proucts-table>
+    } @else if (this.tableChoice === 'categories') {
+    <app-categories-table></app-categories-table>
+    } @else if (this.tableChoice === 'brands') {
+    <app-brands-table></app-brands-table>
+    } @else if (this.tableChoice === 'sizes') {
+    <app-sizes-table></app-sizes-table>
+    } @else if (this.tableChoice === 'origins') {
+    <app-origins-table></app-origins-table>
+    } @else if (this.tableChoice === 'users') {
+    <app-users-table></app-users-table>
+    }
   </div>
 </div>
