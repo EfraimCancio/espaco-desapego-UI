@@ -12,7 +12,7 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  login(login: string, password: string): Observable<any> {
+  login = (login: string, password: string): Observable<any> => {
     return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", { login, password }).pipe(
       tap((value) => {
         console.log('Access token: ', value);
@@ -21,7 +21,7 @@ export class LoginService {
     )
   }
 
-  logout() {
+  logout = () => {
     localStorage.removeItem('access_token');
   }
 
@@ -30,7 +30,7 @@ export class LoginService {
     return !!token;
   }
 
-  getToken(): string | null {
+  getToken = (): string | null => {
     const token = localStorage.getItem('access_token');
     return token
   }

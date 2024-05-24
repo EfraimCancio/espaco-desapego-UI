@@ -7,11 +7,11 @@ import { Injectable } from '@angular/core';
 export class ProductsService {
   apiUrl: string = 'http://localhost:8080/produtos';
 
-  constructor(private httpClient: HttpClient) { 
-    
+  constructor(private httpClient: HttpClient) {
+
   }
 
-  getActiveProducts() {
+  getActiveProducts = () => {
     const url = this.apiUrl + '/ativos'
     return this.httpClient.get(url)
   }
