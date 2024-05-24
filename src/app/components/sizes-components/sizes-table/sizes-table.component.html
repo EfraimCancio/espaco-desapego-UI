@@ -3,7 +3,7 @@
     <h2>Lista de Tamanhos</h2>
     <button class="btn-register" (click)="registerSize()"><span>Cadastrar</span></button>
   </div>
-  <p-table class="table-sizes" [value]="arrayActiveSizes.content" [tableStyle]="{'min-width': '60rem'}">
+  <p-table class="table-sizes" [value]="arrayActiveSizes?.content" [tableStyle]="{'min-width': '60rem'}">
     <ng-template pTemplate="header">
       <tr>
         <th class="tb-title">Ação</th>
