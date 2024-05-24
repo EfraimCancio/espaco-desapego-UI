@@ -13,11 +13,12 @@ import { SizesService } from '../../../services/sizes.service';
   templateUrl: './sizes-table.component.html',
   styleUrl: './sizes-table.component.css'
 })
+
 export class SizesTableComponent {
   arrayActiveSizes: any;
 
   constructor(
-    private sisesService: SizesService,
+    private sizesService: SizesService,
   ) { };
 
   ngOnInit(): void {
@@ -26,7 +27,7 @@ export class SizesTableComponent {
 
   listActiveSizes = () => {
     console.log('listar Categoras! ')
-    this.sisesService.getActiveSizes().subscribe({
+    this.sizesService.getActiveSizes().subscribe({
       next: res => {
         this.arrayActiveSizes = res
         console.log('Lista de tamanhos ativas', this.arrayActiveSizes
