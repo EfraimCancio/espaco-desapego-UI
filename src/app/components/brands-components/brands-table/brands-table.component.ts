@@ -32,18 +32,6 @@ export class BrandsTableComponent {
       next: res => {
         this.arrayActiveBrands = res
         console.log('Lista de categorias ativas', this.arrayActiveBrands
-
-
-
-
-
-
-
-
-
-
-
-
         );
       },
       error: err => {
