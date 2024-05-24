@@ -1,1 +1,31 @@
-<p>origins-table works!</p>
+<section class="table-container">
+  <div class="table-title">
+    <h2>Lista de Categorias</h2>
+    <button class="btn-register" (click)="registerOrigin()"><span>Cadastrar</span></button>
+  </div>
+  <p-table class="table-origins" [value]="arrayActiveOrigins.content" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="tb-title">Ação</th>
+        <th class="tb-title" pSortableColumn="id">id <p-sortIcon field="id"></p-sortIcon></th>
+        <th class="tb-title" pSortableColumn="descOrigem">Descrição <p-sortIcon field="descOrigem"></p-sortIcon>
+        </th>
+        <th class="tb-title" pSortableColumn="tipoOrigem">Tipo<p-sortIcon field="tipoOrigem"></p-sortIcon></th>
+
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-origin>
+      <tr>
+        <td class="table-line">
+          <button class="btn-edit" onclick="">
+            E
+          </button>
+        </td>
+        <td class="table-line">{{origin.id}}</td>
+        <td class="table-line">{{origin.descOrigem}}</td>
+        <td class="table-line">{{origin.tipoOrigem}}</td>
+
+      </tr>
+    </ng-template>
+  </p-table>
+</section>
