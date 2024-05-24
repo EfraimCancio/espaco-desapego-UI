@@ -3,7 +3,7 @@
     <h2>Lista de Categorias</h2>
     <button class="btn-register" (click)="registerCategory()"><span>Cadastrar</span></button>
   </div>
-  <p-table [value]="arrayActiveCategory.content" [tableStyle]="{'min-width': '60rem'}" class="table-product">
+  <p-table class="table-category" [value]="arrayActiveCategory.content" [tableStyle]="{'min-width': '60rem'}">
     <ng-template pTemplate="header">
       <tr>
         <th class="tb-title">Ação</th>
