@@ -31,7 +31,20 @@ export class BrandsTableComponent {
     this.brandsService.getActiveBrands().subscribe({
       next: res => {
         this.arrayActiveBrands = res
-        console.log('Lista de categorias ativas', this.arrayActiveBrands);
+        console.log('Lista de categorias ativas', this.arrayActiveBrands
+
+
+
+
+
+
+
+
+
+
+
+
+        );
       },
       error: err => {
         console.log('Erro na requisição', err);
