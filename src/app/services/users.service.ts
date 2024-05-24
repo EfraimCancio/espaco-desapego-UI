@@ -18,4 +18,9 @@ export class UsersService {
       })
     )
   }
+
+  getAllUsers = () => {
+    const url = this.apiUrl
+    return this.httpClient.get(url)
+  }
 }
